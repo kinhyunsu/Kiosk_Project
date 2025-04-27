@@ -1,15 +1,9 @@
-package Kiosk.Lv2;
-
-import java.util.Queue;
-import java.util.ArrayList;
-import java.util.Optional;
-
+package Kiosk.Lv3;
 
 public class MenuItem {
     private String name;
     private Double price;
     private String account;
-
 
     public MenuItem(String name, Double price, String account) {
         this.name = name;
