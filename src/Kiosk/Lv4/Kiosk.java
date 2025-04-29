@@ -12,10 +12,10 @@ public class Kiosk {
     }
 
     public void start() {
-        while(true) {
+        while (true) {
             System.out.println(" [ MAIN MENU ] ");
             for (int i = 0; i < menus.size(); i++) {
-                System.out.println((i+1) +"." + menus.get(i).getCategoryName());
+                System.out.println((i + 1) + "." + menus.get(i).getCategoryName());
             }
             System.out.println("0. 종료 | 종료");
 
@@ -28,36 +28,40 @@ public class Kiosk {
             }
 
             if (input >= 1 && input <= menus.size()) {
-                showMenuItems(menus.get(input -1));
+                showMenuItems(menus.get(input - 1));
             } else {
                 System.out.println("올바른 입력을 해주세요.");
             }
         }
     }
 
+    // ✅ 클래스 블록 내에 독립적으로 정의
     private void showMenuItems(Menu menu) {
-        System.out.println("[ " + menu.getCategoryName() + " MENU ]");
+        while (true) {
+            System.out.println("[ " + menu.getCategoryName() + " MENU ]");
 
-        List<MenuItem> items = menu.getMenuItems();
-        for (int i = 0; i < items.size(); i++) {
-            System.out.println((i+1) + ". " + items.get(i));
-        }
-        System.out.println("0. 뒤로가기");
+            List<MenuItem> items = menu.getMenuItems();
+            for (int i = 0; i < items.size(); i++) {
+                System.out.println((i + 1) + ". " + items.get(i));
+            }
+            System.out.println("0. 뒤로가기");
 
-        System.out.println("메뉴 번호를 선택해주세요 : ");
-        int choice = scanner.nextInt();
+            System.out.println("메뉴 번호를 선택해주세요 : ");
+            int choice = scanner.nextInt();
 
-        if (choice == 0) {
-            return;
-        }
+            if (choice == 0) {
+                return;
+            }
 
-        if (choice >= 1 && choice <= items.size()) {
-            System.out.println("선택한 메뉴 : " + items.get(choice -1 ));
-        } else {
-            System.out.println("올바른 입력을 해주세요 : ");
+            if (choice >= 1 && choice <= items.size()) {
+                System.out.println("선택한 메뉴 : " + items.get(choice - 1));
+            } else {
+                System.out.println("올바른 입력을 해주세요 : ");
+            }
         }
     }
 
+    // ✅ 독립적인 getter, setter
     public List<Menu> getMenus() {
         return menus;
     }
@@ -66,3 +70,5 @@ public class Kiosk {
         this.menus = menus;
     }
 }
+
+
