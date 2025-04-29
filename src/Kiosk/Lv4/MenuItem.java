@@ -12,7 +12,7 @@ public class MenuItem {
         this.price = price;
         this.account = account;
     }
-
+    //getter, setter는 필요하지 않아서 추가하지 않았음
     public String getName() { return name; }
     public double getPrice() { return price; }
     public String getAccount() { return account;}

@@ -19,7 +19,7 @@ public class Kiosk {
             }
             System.out.println("0. 종료 | 종료");
 
-            System.out.println("메뉴를 선택하세요 : ");
+            System.out.print("메뉴를 선택하세요 : ");
             int input = scanner.nextInt();
 
             if (input == 0) {
@@ -56,5 +56,13 @@ public class Kiosk {
         } else {
             System.out.println("올바른 입력을 해주세요 : ");
         }
+    }
+
+    public List<Menu> getMenus() {
+        return menus;
+    }
+
+    public void setMenus(List<Menu> menus) {
+        this.menus = menus;
     }
 }

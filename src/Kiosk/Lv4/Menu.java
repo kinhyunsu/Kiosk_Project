@@ -11,12 +11,10 @@ public class Menu {
         this.categoryName = categoryName;
         this.menuItems = menuItems;
     }
+    //Getter
+    public String getCategoryName() { return categoryName; }
+    public List<MenuItem> getMenuItems() { return menuItems; }
 
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public List<MenuItem> getMenuItems() {
-        return menuItems;
-    }
+    public void setCategoryName(String categoryName) { this.categoryName = categoryName; }
+    public void setMenuItems(List<MenuItem> menuItems) { this.menuItems = menuItems; }
 }
