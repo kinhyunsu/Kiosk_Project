@@ -1,10 +1,15 @@
-package Kiosk.Lv4;
+package Kiosk.Challenge;
+
+import Kiosk.Challenge.Menu;
+import Kiosk.Challenge.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Main {
     public static void main(String[] args) {
+
         List<Menu> menus = new ArrayList<>();
         List<MenuItem> burgerItems = new ArrayList<>();
 
@@ -24,9 +29,14 @@ public class Main {
         menus.add(new Menu("Drinks", new ArrayList<>()));
         menus.add(new Menu("Desserts", new ArrayList<>()));
 
-
-        Kiosk kiosk = new Kiosk(menus);
+        Cart cart = new Cart();
+        Kiosk kiosk = new Kiosk(menus, cart);
         kiosk.start();
 
+
+
+
     }
+
+
 }
